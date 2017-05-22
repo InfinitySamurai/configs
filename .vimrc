@@ -1,4 +1,4 @@
-let mapleader = "\"
+let mapleader = "\\"
 
 execute pathogen#infect()
 syntax on
