@@ -29,6 +29,9 @@ set hlsearch
 vmap <C-c> "+y
 nmap <C-v> "+p
 
+" Saving with ctrl-s
+nmap <C-s> :w<enter>
+
 " tab swapping
 map <f5> :tabp<enter>
 map <f6> :tabn<enter>
