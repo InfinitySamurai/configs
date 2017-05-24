@@ -4,6 +4,10 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" colour scheme goes here
+colorscheme gruvbox
+set background=dark
+
 " Set line numbers
 set number
 set relativenumber
@@ -26,8 +30,8 @@ vmap <C-c> "+y
 nmap <C-v> "+p
 
 " tab swapping
-map <f6> :tabp<enter>
-map <f7> :tabn<enter>
+map <f5> :tabp<enter>
+map <f6> :tabn<enter>
 
 
 " Visualize tabs and newlines
