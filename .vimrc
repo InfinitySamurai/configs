@@ -18,6 +18,9 @@ set visualbell
 " Some whitespace stuff, change later
 set wrap
 set textwidth=79
+set tabstop=4
+set shiftwidth=4
+set expandtab=4
 
 " Searching
 set ignorecase
