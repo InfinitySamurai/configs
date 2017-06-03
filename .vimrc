@@ -20,7 +20,7 @@ set wrap
 set textwidth=79
 set tabstop=4
 set shiftwidth=4
-set expandtab=4
+set expandtab
 
 " Searching
 set ignorecase
