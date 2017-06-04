@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Startup
+Comment=Run a script when gnome starts up
+Exec=/usr/bin/startup
+Terminal=false
+Type=Application
+X-Gnome-Autostart-enabled=true

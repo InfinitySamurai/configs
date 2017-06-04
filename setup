@@ -5,7 +5,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "Creating symlinks from $DIR"
 
 # get the users home that is running this script
-USER_HOME=$(eval echo ~${SUDO_USER})
+USER_HOME="$(eval echo ~${SUDO_USER})"
 
 # Map files to their location
 declare -A filemap
@@ -13,8 +13,8 @@ declare -A filemap
 filemap[".vimrc"]=$USER_HOME
 filemap[".bashrc"]=$USER_HOME
 filemap[".vim"]=$USER_HOME
-# TODO: this file needs to be added to startup
 filemap["startup"]="/usr/bin/"
+filemap["startup.desktop"]="$USER_HOME/.config/autostart"
 
 
 # enable hidden files to be able to be found
@@ -23,7 +23,7 @@ shopt -s dotglob
 # remove the files and update them with symlinks from the configs folder
 for filepath in $DIR/*
 do
-    filename=`basename $filepath`
+    filename=$(basename $filepath)
     copypath=${filemap[$filename]}
     if [ -n "$copypath" ]
     then
