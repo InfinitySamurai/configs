@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# get this scripts directory
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+echo "Creating symlinks from $DIR"
+
+# Map files to their location
+declare -A filemap
+
+filemap[".git"]=$HOME
+filemap[".vim"]=$HOME
+filemap[".vimrc"]=$HOME
+filemap[".bashrc"]=$HOME
+filemap[".vim"]=$HOME
+filemap["startup"]="/etc/systemd/system/"
+
+
+# enable hidden files to be able to be found
+shopt -s dotglob
+
+for filepath in $DIR/*
+do
+#   echo $filepath
+    filename=`basename $filepath`
+#   echo $filename
+    copypath=${filemap[$filename]}
+#   echo $copypath
+    if [ -n "$copypath" ]
+    then
+        echo "Symlinking $filename to $copypath"
+    fi
+done
+
+# disable hidden files being picked up
+shopt -u dotglob
+
