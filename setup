@@ -14,7 +14,6 @@ filemap[".vimrc"]=$USER_HOME
 filemap[".bashrc"]=$USER_HOME
 filemap[".vim"]=$USER_HOME
 # TODO: this file needs to be added to startup
-filemap["startup.service"]="/etc/systemd/system/"
 filemap["startup"]="/usr/bin/"
 
 
