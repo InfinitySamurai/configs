@@ -13,7 +13,9 @@ declare -A filemap
 filemap[".vimrc"]=$USER_HOME
 filemap[".bashrc"]=$USER_HOME
 filemap[".vim"]=$USER_HOME
-filemap["startup"]="/etc/systemd/system/"
+# TODO: this file needs to be added to startup
+filemap["startup.service"]="/etc/systemd/system/"
+filemap["startup"]="/usr/bin/"
 
 
 # enable hidden files to be able to be found
