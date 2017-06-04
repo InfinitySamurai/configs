@@ -20,13 +20,11 @@ filemap["startup"]="/etc/systemd/system/"
 # enable hidden files to be able to be found
 shopt -s dotglob
 
+# remove the files and update them with symlinks from the configs folder
 for filepath in $DIR/*
 do
-#   echo $filepath
     filename=`basename $filepath`
-#   echo $filename
     copypath=${filemap[$filename]}
-#   echo $copypath
     if [ -n "$copypath" ]
     then
         echo "Symlinking $filename to $copypath"
