@@ -4,14 +4,16 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "Creating symlinks from $DIR"
 
+# get the users home that is running this script
+USER_HOME=$(eval echo ~${SUDO_USER})
+
 # Map files to their location
 declare -A filemap
 
-filemap[".git"]=$HOME
-filemap[".vim"]=$HOME
-filemap[".vimrc"]=$HOME
-filemap[".bashrc"]=$HOME
-filemap[".vim"]=$HOME
+filemap[".vim"]=$USER_HOME
+filemap[".vimrc"]=$USER_HOME
+filemap[".bashrc"]=$USER_HOME
+filemap[".vim"]=$USER_HOME
 filemap["startup"]="/etc/systemd/system/"
 
 
@@ -28,6 +30,8 @@ do
     if [ -n "$copypath" ]
     then
         echo "Symlinking $filename to $copypath"
+        rm -r $copypath/$filename
+        ln -s $filepath $copypath
     fi
 done
 
