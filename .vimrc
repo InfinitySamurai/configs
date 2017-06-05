@@ -1,4 +1,4 @@
-let mapleader = "\\"
+let maplocalleader = "\\"
 
 execute pathogen#infect()
 syntax on
@@ -47,5 +47,5 @@ set listchars=tab:▸\ ,eol:¬
 " Uncomment this to enable by default:
 " set list " To enable by default
 " Or use your leader key + l to toggle on/off
-map <leader>w :set list!<CR> " Toggle tabs and EOL
+map <localleader>w :set list!<CR> " Toggle tabs and EOL
 
