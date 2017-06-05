@@ -10,6 +10,7 @@ USER_HOME="$(eval echo ~${SUDO_USER})"
 # Map files to their location
 declare -A filemap
 
+filemap["tasks.todo"]=$USER_HOME
 filemap[".vimrc"]=$USER_HOME
 filemap[".bashrc"]=$USER_HOME
 filemap[".vim"]=$USER_HOME
