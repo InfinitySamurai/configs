@@ -1,8 +1,3 @@
 #!/bin/bash
 
 setxkbmap -option caps:super
-
-cd $HOME/tasks
-git pull
-cd $HOME/configs
-git pull
