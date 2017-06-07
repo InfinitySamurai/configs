@@ -22,3 +22,6 @@ PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 # print out my todo list
 cat $HOME/todo.txt
+
+# disable software flow control
+stty -ixon
