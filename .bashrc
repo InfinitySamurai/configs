@@ -21,4 +21,4 @@ alias kids_admin='ssh itwadmin@kids.inventtheworld.com.au'
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 # print out my todo list
-cat $HOME/todo
+cat $HOME/todo.txt
