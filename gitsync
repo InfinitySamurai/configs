@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# get the working directory of the user so we can put them back there after
+# this has run
+DIR="$PWD"
+
+# create a list of locations I want to sync
+gitlist=("$HOME/configs" "$HOME/tasks" "$HOME/projects/spin-to-win")
+
+for i in ${gitlist[@]}; do
+    cd ${i}
+    echo "pulling in ${i}"
+    git pull
+done
+
+cd $DIR

@@ -15,6 +15,7 @@ filemap[".bashrc"]=$USER_HOME
 filemap[".vim"]=$USER_HOME
 filemap["startup"]="/usr/bin/"
 filemap["startup.desktop"]="$USER_HOME/.config/autostart"
+filemap["gitsync"]="/usr/bin"
 
 
 # enable hidden files to be able to be found
