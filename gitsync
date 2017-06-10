@@ -5,7 +5,12 @@
 DIR="$PWD"
 
 # create a list of locations I want to sync
-gitlist=("$HOME/configs" "$HOME/tasks" "$HOME/projects/spin-to-win")
+gitlist=(
+        "$HOME/configs"
+        "$HOME/tasks"
+        "$HOME/projects/spin-to-win"
+        "$HOME/projects/100-days-of-code"
+        )
 
 for i in ${gitlist[@]}; do
     cd ${i}
