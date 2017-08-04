@@ -14,7 +14,7 @@ source /usr/bin/virtualenvwrapper.sh
 
 
 alias inst='yaourt -S'
-alias upgrade='pacsrv -Syu'
+alias upgrade='sudo pacsrv -Syu'
 alias sd='sudo shutdown -h 0'
 alias kids_admin='ssh itwadmin@kids.inventtheworld.com.au'
 
