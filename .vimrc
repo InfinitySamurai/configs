@@ -30,6 +30,9 @@ set smartcase
 set wrapscan
 set hlsearch
 
+" spellcheck on always
+set spell spelllang=en_au
+
 " Make ctrl+c and ctrl+v work to normal buffers
 vmap <C-c> "+y
 nmap <C-v> "+p
